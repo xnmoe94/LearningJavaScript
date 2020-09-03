@@ -124,5 +124,3 @@ const Bookrating = books.reduce((groupedbook, book) => {
     groupedbook[key].push(book);
     return groupedbook;
 }, {});
-
-Bookrating;
