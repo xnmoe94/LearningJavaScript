@@ -98,7 +98,7 @@ const annoyer = {
     start() {
         this.timerid = setInterval(() => {
             console.log(this.pickPhrases())
-            stop();
+
         }, 3000)
     },
     stop() {
@@ -107,4 +107,65 @@ const annoyer = {
         console.log("Stopping please get the hell out of there")
 
     }
+}
+
+
+// function makeDeck() {
+//     const deck = [];
+//     const suits = ['hearts', 'diamonds', 'spades', 'clubs', ];
+//     const values = '2,3,4,5,6,7,8,9,10,J,Q,K,A';
+
+
+//     for (let value of values.split(',')) {
+//         for (let suit of suits) {
+//             deck.push({
+//                 value,
+//                 suit
+//             })
+
+//         }
+
+//     }
+
+//     return deck;
+// }
+
+// function drawCard(deck) {
+//     return deck.pop()
+// }
+
+// const myDeck = makeDeck();
+
+
+const mydeck = {
+    deck: [],
+    suits: ['hearts', 'diamonds', 'spades', 'clubs', ],
+    values: '2,3,4,5,6,7,8,9,10,J,Q,K,A',
+    InitializedDeck() {
+        const { suits, deck, values } = this;
+        for (let value of values.split(',')) {
+            for (let suit of suits) {
+                deck.push({
+                    value,
+                    suit
+                })
+
+            }
+
+        }
+
+        return deck;
+    },
+
+    drawCard() {
+
+        while (this.deck.length >= 2) {
+            console.log(this.deck.pop());
+        }
+
+
+
+    }
+
+
 }
