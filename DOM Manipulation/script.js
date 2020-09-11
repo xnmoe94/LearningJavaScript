@@ -1,47 +1,47 @@
-const li = document.querySelectorAll('li');
+// const li = document.querySelectorAll('li');
 
-for (let i = 0; i < li.length; i++) {
-    console.log(li[i].innerText);
-    li[i].innerText = "We are all Heros";
+// for (let i = 0; i < li.length; i++) {
+//     console.log(li[i].innerText);
+//     li[i].innerText = "We are all Heros";
 
-}
+// }
 
-const colors = ['red', 'yellow', 'green', 'blue'];
+// const colors = ['red', 'yellow', 'green', 'blue'];
 
-li.forEach((element, i) => {
-    const color = colors[i];
-    element.style.color = color;
-    console.log(color)
-
-
-})
-
-for (let alllis of li) {
-
-    alllis.innerHTML = 'We are <b>The Champions</b>';
-    alllis.style.color = 'red';
-}
+// li.forEach((element, i) => {
+//     const color = colors[i];
+//     element.style.color = color;
+//     console.log(color)
 
 
-const tod = document.querySelector('.todo');
+// })
 
-tod.classList.add('done');
+// for (let alllis of li) {
 
-
-const ul = document.querySelector('ul');
-const li = document.querySelector('li');
-const addButton = document.querySelector('button');
-const input = document.querySelector('input');
-
-addButton.addEventListener('click', function() {
-
-    const getvalue = input.value;
-    const addelement = document.createElement('li');
-    addelement.innerHTML = getvalue;
-    ul.appendChild(addelement);
+//     alllis.innerHTML = 'We are <b>The Champions</b>';
+//     alllis.style.color = 'red';
+// }
 
 
-})
+// const tod = document.querySelector('.todo');
+
+// tod.classList.add('done');
+
+
+// const ul = document.querySelector('ul');
+// const li = document.querySelector('li');
+// const addButton = document.querySelector('button');
+// const input = document.querySelector('input');
+
+// addButton.addEventListener('click', function() {
+
+//     const getvalue = input.value;
+//     const addelement = document.createElement('li');
+//     addelement.innerHTML = getvalue;
+//     ul.appendChild(addelement);
+
+
+// })
 
 
 
@@ -144,6 +144,10 @@ for (let games of warriorsGames) {
     const pointss = `${awayTeam.points} -  ${homeTeam.points}`
     gameli.innerHTML = `${teamNames} ${pointss}`;
     bodyy.appendChild(gameli);
+
+    if (warriorsGames.awayTeam.points > warriorsGames.homeTeam.points) {
+        const scoreLine = `<b>${warriorsGames.homeTeam.team}</b>`
+    }
 
 
 
