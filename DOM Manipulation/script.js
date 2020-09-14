@@ -151,7 +151,7 @@ const makeChart = (warriorgame) => {
         } else {
             scoreLine = `<b>${aPoints}</b>-${hPoints}`;
         }
-        const warrior = hTeam = 'Golden State' ? homeTeam : awayTeam;
+        const warrior = hTeam === 'Golden State' ? homeTeam : awayTeam;
         gameli.classList.add(warrior.isWinner ? 'win' : 'loss');
         gameli.innerHTML = `${teamNames} ${scoreLine}`;
         ul.appendChild(gameli);
