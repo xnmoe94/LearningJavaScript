@@ -14,8 +14,8 @@ const player = document.querySelector("#player");
 
 window.addEventListener("keyup", function(e) {
     /*
-                                      Moving Top and Down
-                                      */
+                                                    Moving Top and Down
+                                                    */
     if (e.keyCode === 40 || e.keyCode === "ArrowDown") {
         const currentTop = extractPos(player.style.top);
         player.style.top = `${currentTop + 20}px`;
@@ -24,14 +24,16 @@ window.addEventListener("keyup", function(e) {
         player.style.top = `${currentTop - 20}px`;
 
         /*
-                                                                  Moving Left and Right 
-                                                                  */
+                                                                                              Moving Left and Right 
+                                                                                              */
     } else if (e.keyCode === 37 || e.key === "ArrowLeft") {
         const currentLeft = extractPos(player.style.left);
         player.style.left = `${currentLeft - 20}px`;
+        player.style.transform = "scale(-1,1)";
     } else if (e.keyCode === 39 || e.key === "ArrowRight") {
         const currentLeft = extractPos(player.style.left);
         player.style.left = `${currentLeft + 20}px`;
+        player.style.transform = "scale(1,1)";
     }
 });
 
